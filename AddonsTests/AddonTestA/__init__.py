@@ -33,6 +33,7 @@ from . op import Test_OT_A_Operator01
 from . op import Test_OT_A_Operator02
 from . op import Test_OT_A_Operator03
 from . op import Test_OT_A_Operator04
+from . op2 import Test_OT_A2_Operator01
 
 
 classes = (
@@ -40,7 +41,8 @@ classes = (
     Test_OT_A_Operator01,
     Test_OT_A_Operator02,
     Test_OT_A_Operator03,
-    Test_OT_A_Operator04
+    Test_OT_A_Operator04,
+    Test_OT_A2_Operator01
 )
 
 
