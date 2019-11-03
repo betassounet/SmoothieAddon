@@ -14,6 +14,7 @@ class Test_PT_A_Panel(bpy.types.Panel):
         layout = self.layout
         layout.operator('view3d.add_plan1', text="Ajout Plan") # ici un bouton a la ligne suivante
         layout.operator('view3d.add_line1', text="Ajout Line") # ici un bouton a la ligne suivante
-        layout.operator('view3d.add_meshes1', text="Analyse 01") # ici un bouton a la ligne suivante
+        layout.operator('view3d.analyse1', text="Analyse 01") # ici un bouton a la ligne suivante
+        layout.operator('view3d.analyse2', text="Analyse 02") # ici un bouton a la ligne suivante
 
         

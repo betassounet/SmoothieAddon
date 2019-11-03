@@ -32,12 +32,15 @@ from . panel import Test_PT_A_Panel
 from . op import Test_OT_A_Operator01
 from . op import Test_OT_A_Operator02
 from . op import Test_OT_A_Operator03
+from . op import Test_OT_A_Operator04
+
 
 classes = (
     Test_PT_A_Panel,
     Test_OT_A_Operator01,
     Test_OT_A_Operator02,
-    Test_OT_A_Operator03
+    Test_OT_A_Operator03,
+    Test_OT_A_Operator04
 )
 
 
