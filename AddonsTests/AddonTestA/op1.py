@@ -1,5 +1,18 @@
 import bpy
+import blf
         
+
+# voir : https://blender.stackexchange.com/questions/150267/how-to-move-object-while-tracking-to-mouse-cursor-with-a-modal-operator
+def draw_callback_px(self, context):
+    font_id = 0
+    blf.position(font_id, 15, 100, 0)
+    blf.size(font_id, 12, 72)
+    blf.draw(font_id, "Mouse position: " )
+    blf.position(font_id, 15, 115, 0)
+    blf.draw(font_id, "Location on plane " )
+    blf.position(font_id, 15, 130, 0)
+    blf.draw(font_id, "Object location " )
+
 class Test_OT_A_Operator03(bpy.types.Operator):
     bl_idname = "view3d.analyse1"
     bl_label = "Simple operator"
@@ -68,6 +81,9 @@ class Test_OT_A_Operator03(bpy.types.Operator):
             from bpy_extras import object_utils
             #object_utils.object_data_add(context, mesh, operator=self)
             object_utils.object_data_add(context, mesh, None)  # solution pour les parametres..: https://docs.blender.org/api/current/bpy_extras.object_utils.html
+
+
+        bpy.types.SpaceView3D.draw_handler_add(draw_callback_px, (None), 'WINDOW', 'POST_PIXEL')
 
         return {'FINISHED'}
 

@@ -18,4 +18,9 @@ class Test_PT_A_Panel(bpy.types.Panel):
         #layout.operator('view3d.analyse2', text="Analyse 02 (Introspection)") # ici un bouton a la ligne suivante
         layout.operator('view3d.analysecoord', text="Analyse Coord") # ici un bouton a la ligne suivante
 
+
+
+        # layout.operator('scene.init_global') # ici un bouton a la ligne suivante
+        # layout.operator('scene.start_callback') # ici un bouton a la ligne suivante
+        # layout.operator('scene.stop_callback') # ici un bouton a la ligne suivante
         

@@ -35,6 +35,12 @@ from . op1 import Test_OT_A_Operator03
 from . opTest import Test_OT_A_Operator04
 from . op2 import Test_OT_A2_Operator01
 
+#Ajout des operateurs pour test d'event sur mouse.. qui ne marche pas mais interessant a comprendre..et a tranformer
+from . opWatcher import InitGlobal
+from . opWatcher import StopCallback
+from . opWatcher import StartCallback
+
+
 
 classes = (
     Test_PT_A_Panel,
@@ -42,8 +48,12 @@ classes = (
     Test_OT_A_Operator02,
     Test_OT_A_Operator03,
     Test_OT_A_Operator04,
-    Test_OT_A2_Operator01
+    Test_OT_A2_Operator01,
+    InitGlobal,
+    StopCallback,
+    StartCallback
 )
+
 
 
 def register():
@@ -52,9 +62,7 @@ def register():
     # register_class(Test_OT_A_Operator01)
     for cls in classes:
        register_class(cls)
-       
-
-    
+   
 
 def unregister():
     from bpy.utils import unregister_class
