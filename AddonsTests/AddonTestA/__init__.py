@@ -31,8 +31,8 @@ import bpy
 from . panel import Test_PT_A_Panel
 from . op import Test_OT_A_Operator01
 from . op import Test_OT_A_Operator02
-from . op import Test_OT_A_Operator03
-from . op import Test_OT_A_Operator04
+from . op1 import Test_OT_A_Operator03
+from . opTest import Test_OT_A_Operator04
 from . op2 import Test_OT_A2_Operator01
 
 
@@ -52,6 +52,7 @@ def register():
     # register_class(Test_OT_A_Operator01)
     for cls in classes:
        register_class(cls)
+       
 
     
 
