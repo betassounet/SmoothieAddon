@@ -82,7 +82,7 @@ class Test_OT_A_Operator03(bpy.types.Operator):
             #object_utils.object_data_add(context, mesh, operator=self)
             object_utils.object_data_add(context, mesh, None)  # solution pour les parametres..: https://docs.blender.org/api/current/bpy_extras.object_utils.html
 
-
+        # exemple pour le callback d'écriture..:
         bpy.types.SpaceView3D.draw_handler_add(draw_callback_px, (None), 'WINDOW', 'POST_PIXEL')
 
         return {'FINISHED'}
